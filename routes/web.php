@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TopicController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -27,5 +28,9 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/topics', [TopicController::class, 'index'])->name('topics.index');
+Route::post('/topics', [TopicController::class, 'store'])->name('topics.store');
+Route::get('/topics/create', [TopicController::class, 'create'])->name('topics.create');
 
 require __DIR__.'/auth.php';
