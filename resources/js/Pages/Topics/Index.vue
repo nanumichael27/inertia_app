@@ -74,6 +74,7 @@
                       </td>
                       <td
                         class="
+                        flex space-x-4
                           px-6
                           py-4
                           whitespace-nowrap
@@ -81,11 +82,15 @@
                           font-medium
                         "
                       >
-                        <a
-                          href="#"
+                        <Link
+                          :href="`/topics/${topic.id}/delete`"
+                          method="delete" as="button" type="button"
                           class="text-indigo-600 hover:text-indigo-900"
-                          >Edit</a
-                        >
+                          >Edit</Link>
+                          <Link
+                          :href="`/topics/${topic.id}/delete`"
+                          class="text-red-600 hover:text-indigo-900"
+                          >Delete</Link>
                       </td>
                     </tr>
 
