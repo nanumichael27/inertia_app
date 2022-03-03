@@ -83,14 +83,16 @@
                         "
                       >
                         <Link
-                          :href="`/topics/${topic.id}/delete`"
+                         :href="`/topics/${topic.id}/edit`"
+                          class="text-indigo-600 hover:text-indigo-900">
+                          Edit
+                        </Link>
+                        <Link
+                          :href="`/topics/${topic.id}`"
                           method="delete" as="button" type="button"
-                          class="text-indigo-600 hover:text-indigo-900"
-                          >Edit</Link>
-                          <Link
-                          :href="`/topics/${topic.id}/delete`"
-                          class="text-red-600 hover:text-indigo-900"
-                          >Delete</Link>
+                          class="text-red-600 hover:text-indigo-900">
+                          Delete
+                        </Link>
                       </td>
                     </tr>
 

@@ -33,7 +33,7 @@ Route::get('/topics', [TopicController::class, 'index'])->name('topics.index');
 Route::post('/topics', [TopicController::class, 'store'])->name('topics.store');
 Route::get('/topics/create', [TopicController::class, 'create'])->name('topics.create');
 Route::put('/topics/{topic}', [TopicController::class, 'update'])->name('topics.update');
-Route::get('/topics/{topic}/delete', [TopicController::class, 'destroy'])->name('topics.destroy');
+Route::delete('/topics/{topic}', [TopicController::class, 'destroy'])->name('topics.destroy');
 Route::get('/topics/{topic}/edit', [TopicController::class, 'edit'])->name('topics.edit');
 
 
